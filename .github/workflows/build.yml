@@ -166,6 +166,7 @@ jobs:
 
       - name: Install gn
         run: |
+          gclient sync -y
           wget https://chrome-infra-packages.appspot.com/dl/gn/gn/mac-amd64/+/latest -O ./gn.zip
           mkdir -p buildtools/mac/
           unzip gn.zip -d buildtools/mac/
@@ -313,6 +314,7 @@ jobs:
 
       - name: Install gn
         run: |
+          gclient sync -y
           wget https://chrome-infra-packages.appspot.com/dl/gn/gn/linux-amd64/+/latest -O ./gn.zip
           mkdir -p buildtools/linux64/
           unzip gn.zip -d buildtools/linux64/
