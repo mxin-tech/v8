@@ -179,11 +179,11 @@ jobs:
 
       - name: Install ninja
         run: |
-          brew install ninja
-          NINJA_PATH=$(which ninja)
-          CURRENT_DIR=$(pwd)
-          mkdir -p ${CURRENT_DIR}/third_party/ninja
-          ln -s ${NINJA_PATH} ${CURRENT_DIR}/third_party/ninja/ninja
+          # brew install ninja
+          # NINJA_PATH=$(which ninja)
+          # CURRENT_DIR=$(pwd)
+          # mkdir -p ${CURRENT_DIR}/third_party/ninja
+          # ln -s ${NINJA_PATH} ${CURRENT_DIR}/third_party/ninja/ninja
 
       - name: Install llvm
         run: |
@@ -329,14 +329,14 @@ jobs:
               echo "Ninja not found, installing..."
               # sudo apt update
               sudo apt install ninja-build
+              which ninja
+              NINJA_PATH=$(which ninja)
+              CURRENT_DIR=$(pwd)
+              mkdir -p ${CURRENT_DIR}/third_party/ninja
+              ln -s ${NINJA_PATH} ${CURRENT_DIR}/third_party/ninja/ninja
           else
               echo "Ninja is already installed."
           fi
-          which ninja
-          NINJA_PATH=$(which ninja)
-          CURRENT_DIR=$(pwd)
-          mkdir -p ${CURRENT_DIR}/third_party/ninja
-          ln -s ${NINJA_PATH} ${CURRENT_DIR}/third_party/ninja/ninja
 
       - name: Install linux sysroot
         run: |
