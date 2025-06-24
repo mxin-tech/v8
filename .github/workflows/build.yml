@@ -137,7 +137,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        arch: [arm64, x64, simulator-arm64]
+        # arch: [arm64, x64, simulator-arm64]
+        arch: [arm64]
 
     name: "iOS"
     runs-on: macos-latest
@@ -198,6 +199,7 @@ jobs:
           export PATH=${{ env.DEPOT_TOOLS_PATH }}:$PATH
           which gn
           CURRENT_DIR=$(pwd)
+          update_depot_tools
           
           if [[ "${{ matrix.arch }}" == "simulator-arm64" ]];then
             ./build-ios.sh arm64 simulator
@@ -276,7 +278,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        arch: [arm64, arm, x64, x86]
+        # arch: [arm64, arm, x64, x86]
+        arch: [arm64]
 
     name: "android"
     runs-on: ubuntu-latest
@@ -350,6 +353,7 @@ jobs:
           export PATH=${{ env.DEPOT_TOOLS_PATH }}:$PATH
           which gn
           CURRENT_DIR=$(pwd)
+          update_depot_tools
           
           ./build-android.sh ${{ matrix.arch }}
         env:
