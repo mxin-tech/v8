@@ -84,7 +84,7 @@ jobs:
   #         cp -r ./include ./dist/
 
   #     - name: Upload artifact
-  #       uses: actions/upload-artifact@v3
+  #       uses: actions/upload-artifact@v4
   #       with:
   #         name: v8-mac-${{ matrix.arch }}
   #         path: ./dist
@@ -212,7 +212,7 @@ jobs:
           cp -r ./include ./dist/
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: v8-ios-${{ matrix.arch }}
           path: ./dist
@@ -361,7 +361,7 @@ jobs:
           cp -r ./include ./dist/
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: v8-android-${{ matrix.arch }}
           path: ./dist
@@ -505,7 +505,7 @@ jobs:
   #         cp -r ./include ./dist/
 
   #     - name: Upload artifact
-  #       uses: actions/upload-artifact@v3
+  #       uses: actions/upload-artifact@v4
   #       with:
   #         name: v8-windows-${{ matrix.arch }}-${{ matrix.build_type }}
   #         path: ./dist
@@ -748,7 +748,7 @@ jobs:
   #         cp -r ./include ./dist/
 
   #     - name: Upload artifact
-  #       uses: actions/upload-artifact@v3
+  #       uses: actions/upload-artifact@v4
   #       with:
   #         name: v8-oh-${{ matrix.arch }}
   #         path: ./dist
@@ -878,7 +878,7 @@ jobs:
   #         cp -r ./include ./dist/
 
   #     - name: Upload artifact
-  #       uses: actions/upload-artifact@v3
+  #       uses: actions/upload-artifact@v4
   #       with:
   #         name: v8-linux-${{ matrix.arch }}
   #         path: ./dist
