@@ -198,7 +198,7 @@ jobs:
           export PATH=${{ env.DEPOT_TOOLS_PATH }}:$PATH
           which gn
           CURRENT_DIR=$(pwd)
-          gclient config
+          gclient config https://chromium.googlesource.com/v8/v8.git
           gclient sync -f
           
           if [[ "${{ matrix.arch }}" == "simulator-arm64" ]];then
@@ -352,7 +352,7 @@ jobs:
           export PATH=${{ env.DEPOT_TOOLS_PATH }}:$PATH
           which gn
           CURRENT_DIR=$(pwd)
-          gclient config
+          gclient config https://chromium.googlesource.com/v8/v8.git
           gclient sync -f
           
           ./build-android.sh ${{ matrix.arch }}
