@@ -166,6 +166,9 @@ jobs:
       - name: Install gn
         run: |
           wget https://chrome-infra-packages.appspot.com/dl/gn/gn/mac-amd64/+/latest -O ./gn.zip
+          ls -al
+          pwd
+          ls buildtools
           unzip gn.zip -d buildtools/mac/
 
       - name: Install dsymutil
