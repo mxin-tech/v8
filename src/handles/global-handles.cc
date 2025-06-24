@@ -954,6 +954,15 @@ void GlobalHandles::IterateAllRootsForTesting(
   }
 }
 
+void GlobalHandles::InterateAllRootsWithClassIds(
+    v8::PersistentHandleVisitor* visitor) {
+  for (Node* node : *regular_nodes_) {
+    if (node->IsWeakOrStrongRetainer() && node->has_wrapper_class_id()) {
+      ApplyPersistentHandleVisitor(visitor, node);
+    }
+  }
+}
+
 void GlobalHandles::RecordStats(HeapStats* stats) {
   *stats->global_handle_count = 0;
   *stats->weak_global_handle_count = 0;

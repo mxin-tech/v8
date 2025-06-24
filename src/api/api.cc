@@ -10543,6 +10543,12 @@ void Isolate::VisitExternalResources(ExternalResourceVisitor* visitor) {
   i_isolate->heap()->VisitExternalResources(visitor);
 }
 
+void Isolate::VisitHandlesWithClassIds(PersistentHandleVisitor* visitor) {
+  i::Isolate* i_isolate = reinterpret_cast<i::Isolate*>(this);
+  i::DisallowGarbageCollection no_gc;
+  i_isolate->global_handles()->InterateAllRootsWithClassIds(visitor);
+}
+
 bool Isolate::IsInUse() {
   i::Isolate* i_isolate = reinterpret_cast<i::Isolate*>(this);
   return i_isolate->IsInUse();
