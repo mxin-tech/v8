@@ -186,7 +186,7 @@ jobs:
 
       - name: Install llvm
         run: |
-          brew install llvm
+          brew install llvm lld
           export PATH="/usr/local/opt/llvm/bin:$PATH"
           LLVM_AR_PATH=$(which llvm-ar)
           XCODE_DEV_PATH=$(xcode-select -p)
