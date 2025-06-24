@@ -157,6 +157,7 @@ jobs:
             git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
             echo "DEPOT_TOOLS_PATH=$DEPOT_TOOLS_PATH" >> $GITHUB_ENV
             echo "DEPOT_TOOLS_PATH=$DEPOT_TOOLS_PATH"
+            export PATH=$DEPOT_TOOLS_PATH:$PATH
 
       - name: Print env
         run: |
@@ -306,6 +307,7 @@ jobs:
             git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
             echo "DEPOT_TOOLS_PATH=$DEPOT_TOOLS_PATH" >> $GITHUB_ENV
             echo "DEPOT_TOOLS_PATH=$DEPOT_TOOLS_PATH"
+            export PATH=$DEPOT_TOOLS_PATH:$PATH
 
       - name: Print env
         run: |
