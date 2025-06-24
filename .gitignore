@@ -41,7 +41,7 @@
 .vscode
 /_*
 /base
-/build
+# /build
 /buildtools
 /check-header-includes
 /Default/
@@ -81,7 +81,7 @@
 !/third_party/wasm-api
 /tools/builtins-pgo/profiles/*.profile
 /tools/builtins-pgo/profiles/profiles_version
-/tools/clang
+# /tools/clang
 /tools/gcmole/bootstrap
 /tools/gcmole/gcmole-tools
 /tools/gcmole/gcmole-tools.tar.gz
