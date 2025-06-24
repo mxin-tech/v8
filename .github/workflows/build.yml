@@ -50,7 +50,7 @@ jobs:
   #     - name: Install gn
   #       run: |
   #         wget https://chrome-infra-packages.appspot.com/dl/gn/gn/mac-amd64/+/latest -O ./gn.zip
-  #.        mkdir buildtools/mac/
+  #.        mkdir -p buildtools/mac/
   #         unzip gn.zip -d buildtools/mac/
 
   #     - name: Install dsymutil
@@ -167,7 +167,7 @@ jobs:
       - name: Install gn
         run: |
           wget https://chrome-infra-packages.appspot.com/dl/gn/gn/mac-amd64/+/latest -O ./gn.zip
-          mkdir buildtools/mac/
+          mkdir -p buildtools/mac/
           unzip gn.zip -d buildtools/mac/
 
       - name: Install dsymutil
@@ -314,7 +314,7 @@ jobs:
       - name: Install gn
         run: |
           wget https://chrome-infra-packages.appspot.com/dl/gn/gn/linux-amd64/+/latest -O ./gn.zip
-          mkdir buildtools/linux64/
+          mkdir -p buildtools/linux64/
           unzip gn.zip -d buildtools/linux64/
 
       - name: Install ninja
@@ -677,7 +677,7 @@ jobs:
   #     - name: Install gn
   #       run: |
   #         wget https://chrome-infra-packages.appspot.com/dl/gn/gn/linux-amd64/+/latest -O ./gn.zip
-  #         mkdir buildtools/linux64/
+  #         mkdir -p buildtools/linux64/
   #         unzip gn.zip -d buildtools/linux64/
 
   #     - name: Install ninja
@@ -832,7 +832,7 @@ jobs:
   #     - name: Install gn
   #       run: |
   #         wget https://chrome-infra-packages.appspot.com/dl/gn/gn/linux-amd64/+/latest -O ./gn.zip
-  #         mkdir buildtools/linux64/
+  #         mkdir -p buildtools/linux64/
   #         unzip gn.zip -d buildtools/linux64/
 
   #     - name: Install ninja
